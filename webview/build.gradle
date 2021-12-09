@@ -3,7 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'maven-publish'
-//    id 'com.kezong.fat-aar'
+    id 'com.kezong.fat-aar'
 }
 
 android {
@@ -47,8 +47,8 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.jddz.huidao'
-                artifactId = 'webview'
+                groupId = 'com.github.cc2hh'
+                artifactId = 'hdwebview'
                 version = '1.4'
             }
         }
@@ -86,17 +86,17 @@ dependencies {
 //    api 'com.google.code.gson:gson:2.8.6'
 //    implementation 'com.airbnb.android:lottie:2.8.0'
 
-//    embed project(path: ':common', configuration: 'default')
-//    embed project(path: ':base', configuration: 'default')
+    embed project(path: ':common', configuration: 'default')
+    embed project(path: ':base', configuration: 'default')
 //    embed 'androidx.core:core-ktx:1.3.2'
 //    embed 'androidx.appcompat:appcompat:1.2.0'
 //    embed 'com.google.android.material:material:1.3.0'
-//    embed 'com.kingja.loadsir:loadsir:1.3.6'
+    embed 'com.kingja.loadsir:loadsir:1.3.6'
 //    embed 'com.google.code.gson:gson:2.8.6'
-//    embed 'com.airbnb.android:lottie:2.8.0'
-//    embed 'org.greenrobot:eventbus:3.2.0'
+    embed 'com.airbnb.android:lottie:2.8.0'
+    embed 'org.greenrobot:eventbus:3.2.0'
 
-    api project(":common")
+//    api project(":common")
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 //    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation rootProject.googleAutoServiceDependency
