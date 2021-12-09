@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jddz.huidao.webview">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application>
+        <activity
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize"
+            android:name=".HDWebViewActivity"
+            android:exported="false"
+            android:process=":hdwebview" />
+
+        <service android:name=".process.main.MainProcessCommandService" />
+
+        <service android:name=".service.IMWindowService" />
+
+    </application>
+
+</manifest>
