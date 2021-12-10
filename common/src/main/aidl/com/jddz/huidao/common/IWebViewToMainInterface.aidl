@@ -10,6 +10,6 @@ interface IWebViewToMainInterface {
      * and return values in AIDL.
      */
 
-    // 处理网页端的命令
+
     void handleWebCommand(String commandName,String jsonParam,IMainToWebViewInterface callback);
 }

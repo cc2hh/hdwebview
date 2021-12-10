@@ -2,8 +2,6 @@ package com.jddz.huidao.common.autoservice
 
 import android.content.Context
 import androidx.fragment.app.Fragment
-import java.util.*
-import kotlin.reflect.KClass
 
 interface HDWebViewService {
 
